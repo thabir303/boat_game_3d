@@ -20,15 +20,15 @@ catImageElement.style.top = '50px';
 catImageElement.style.left = '50px';
 catImageElement.style.width = '100px';
 catImageElement.style.height = '100px';
-catImageElement.src = 'assets/Smile.png'; // Set default cat image (smiling)
+catImageElement.src = 'assets/images/Smile.png'; // Set default cat image (smiling)
 document.body.appendChild(catImageElement);
 
 // Update the cat image based on collision
 function updateCatImage(isPositive) {
   if (isPositive) {
-    catImageElement.src = 'assets/Smile.png'; // Path to smile image
+    catImageElement.src = 'assets/images/Smile.png'; // Path to smile image
   } else {
-    catImageElement.src = 'assets/Crying.png'; // Path to crying image
+    catImageElement.src = 'assets/images/Crying.png'; // Path to crying image
   }
 }
 
@@ -207,7 +207,7 @@ async function init() {
   water = new Water(waterGeometry, {
     textureWidth: 512,
     textureHeight: 512,
-    waterNormals: new THREE.TextureLoader().load('assets/waternormals.jpg', function (texture) {
+    waterNormals: new THREE.TextureLoader().load('assets/images/waternormals.jpg', function (texture) {
       texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
     }),
     sunDirection: new THREE.Vector3(),
